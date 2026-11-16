@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organelle Explorer | CELL-TECH</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .detail-page {
+            max-width: 1100px;
+            width: 90%;
+            margin: 35px auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #15364b;
+            border: 1px solid #53e0d0;
+            color: #53e0d0;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 25px;
+        }
+
+        .detail-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        #organelle3d {
+            height: 420px;
+            border: 1px solid #24536a;
+            border-radius: 15px;
+            background: radial-gradient(circle, #15364b, #07111f);
+            overflow: hidden;
+        }
+
+        #organelle3d canvas {
+            display: block;
+        }
+
+        .details {
+            background: #102438;
+            border: 1px solid #24536a;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .details h1 {
+            color: #53e0d0;
+            margin-bottom: 15px;
+        }
+
+        .details h3 {
+            color: #53e0d0;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .details p {
+            color: #c0d5e4;
+            line-height: 1.7;
+        }
+
+        @media(max-width: 750px) {
+            .detail-layout {
+                grid-template-columns: 1fr;
+            }
+
+            #organelle3d {
+                height: 330px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CELL-TECH</h1>
+    <p>Individual Organelle Explorer</p>
+</header>
+
+<main class="detail-page">
+
+    <a href="index.html" class="back-button">
+        ← Back to Complete Cell
+    </a>
+
+    <div class="detail-layout">
+
+        <section>
+            <div id="organelle3d"></div>
+            <p class="hint">Drag to rotate · Scroll to zoom</p>
+        </section>
+
+        <section class="details">
+            <h1 id="organelleName">Organelle</h1>
+
+            <h3>Overview</h3>
+            <p id="organelleDescription"></p>
+
+            <h3>Structure</h3>
+            <p id="organelleStructure"></p>
+
+            <h3>Functions</h3>
+            <p id="organelleFunction"></p>
+
+            <h3>Computer Analogy</h3>
+            <p id="organelleAnalogy"></p>
+        </section>
+
+    </div>
+
+</main>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+}
+</script>
+
+<script type="module" src="organelle.js"></script>
+</body>
+</html>

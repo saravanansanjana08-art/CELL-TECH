@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #07111f;
+    color: #eaf7ff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 25px;
+    text-align: center;
+    background: #0b1d30;
+    border-bottom: 1px solid #1b4965;
+}
+
+header h1 {
+    color: #53e0d0;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 8px;
+    color: #a8c4d8;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.intro {
+    text-align: center;
+    padding: 35px 10px 20px;
+}
+
+.intro h2,
+.organelles-section h2 {
+    color: #53e0d0;
+    margin-bottom: 12px;
+}
+
+.intro p,
+.hint {
+    color: #a8c4d8;
+}
+
+.model-section {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#cell3d {
+    width: 100%;
+    height: 520px;
+    background: radial-gradient(circle, #15364b, #07111f 70%);
+    border: 1px solid #24536a;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+#cell3d canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hint {
+    padding: 14px;
+    font-size: 13px;
+}
+
+.organelles-section {
+    padding: 35px 0 60px;
+}
+
+.organelles-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.organelles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+}
+
+.organelle-card {
+    background: #102438;
+    color: #eaf7ff;
+    border: 1px solid #24536a;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.organelle-card:hover {
+    transform: translateY(-5px);
+    border-color: #53e0d0;
+    background: #16354b;
+}
+
+.organelle-card h3 {
+    color: #53e0d0;
+    margin-bottom: 8px;
+}
+
+.organelle-card p {
+    color: #a8c4d8;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+button {
+    font: inherit;
+}
+#cell3d {
+    background:
+        radial-gradient(
+            ellipse at center,
+            #183d50 0%,
+            #0a1928 55%,
+            #050c16 100%
+        );
+
+    border: 1px solid #27647b;
+    box-shadow:
+        0 0 30px rgba(39, 180, 205, 0.08),
+        inset 0 0 40px rgba(42, 160, 190, 0.08);
+}

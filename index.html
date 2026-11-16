@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELL-TECH | Explore the Animal Cell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CELL-TECH</h1>
+    <p>Interactive 3D Animal Cell Explorer</p>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Explore the World Inside a Cell</h2>
+        <p>Click on an organelle in the 3D model or select its name below to explore it.</p>
+    </section>
+
+    <section class="model-section">
+        <div id="cell3d"></div>
+        <p class="hint">Drag to rotate · Scroll to zoom · Click an organelle to explore</p>
+    </section>
+
+    <section class="organelles-section">
+        <h2>Explore Individual Organelles</h2>
+        <div id="organelle-list" class="organelles-grid"></div>
+    </section>
+</main>
+
+<script type="module" src="script.js"></script>
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+}
+</script>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
